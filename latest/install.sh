@@ -13,14 +13,13 @@ else
     exit 1
 fi
 
-VERSION="0.0.1"
-URL="https://github.com/wacoco-org/sevaxa-admin/releases/download/v${VERSION}/sevaxa_${VERSION}_${OS}_${ARCH}.tar.gz"
+URL="https://github.com/wacoco-org/sevaxa-install/raw/main/latest/sevaxa_${OS}_${ARCH}.tar.gz"
 
-echo "Downloading sevaxa ${VERSION} for ${OS}/${ARCH}..."
+echo "Downloading sevaxa for ${OS}/${ARCH}..."
 curl -sSL "$URL" | tar -xz
 
 echo "Installing sevaxa..."
 sudo mv sevaxa /usr/local/bin/sevaxa
 sudo chmod +x /usr/local/bin/sevaxa
 
-echo "Installed sevaxa version $VERSION"
+echo "Installed sevaxa (latest)"
